@@ -43,6 +43,30 @@ Welcome to the **Time Drift Chaos Lab** — a hands-on simulation of what happen
 
 **Answer Key:** client2 is ahead by ~5 minutes due to manual offset in `client2.sh`.
 
+
+### 💾 Challenge Instructions
+```bash
+    git clone https://github.com/dkmy-sec/time_drift_chaos_lab
+    cd time_drift_chaos_lab
+    cd lab
+    vagrant up
+```
+
+## Activities:
+1. Bring up all three boxes: `vagrant up`
+2. SSH into clients and run 
+```bash
+  vagrant ssh client1
+  bash /vagrant/scripts/generate_logs.sh
+
+  vagrant ssh client2
+  bash /vagrant/scripts/generate_logs.sh
+```
+3. On `logserver`, view logs:
+   ```bash
+   cat /var/log/client1/syslog.log
+   cat /var/log/client2/syslog.log
+```
 ---
 
 ### ✅ Challenge 2: Fix the Time on client2
