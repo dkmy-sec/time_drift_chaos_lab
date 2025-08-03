@@ -22,7 +22,7 @@ Welcome to the **Time Drift Chaos Lab** — a hands-on simulation of what happen
 
 ### 3. 🔐 TLS Failures from Skewed Time
 - Change system date to past/future
-- Visit HTTPS site (e.g., https://example.com)
+- Visit HTTPS site (e.g., https://dkmy.me)
 - Observe `NET::ERR_CERT_DATE_INVALID` or cert error
 
 ---
