@@ -100,4 +100,4 @@ w32tm /resync
 
 ---
 
-## 🛠️ Built with ❤️ by drunkenmunky for hands-on security education.
+## 🛠️ Built with ❤️ by Kei Nova for hands-on security education.
