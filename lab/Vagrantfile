@@ -1,0 +1,23 @@
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  config.vm.box = "ubuntu/focal64"
+
+  config.vm.define "logserver" do |logserver|
+    logserver.vm.hostname = "logserver"
+    logserver.vm.network "private_network", ip: "192.168.56.10"
+    logserver.vm.provision "shell", path: "bootstrap/logserver.sh"
+  end
+
+  config.vm.define "client1" do |client1|
+    client1.vm.hostname = "client1"
+    client1.vm.network "private_network", ip: "192.168.56.11"
+    client1.vm.provision "shell", path: "bootstrap/client1.sh"
+  end
+
+  config.vm.define "client2" do |client2|
+    client2.vm.hostname = "client2"
+    client2.vm.network "private_network", ip: "192.168.56.12"
+    client2.vm.provision "shell", path: "bootstrap/client2.sh"
+  end
+end

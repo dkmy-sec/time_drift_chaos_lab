@@ -1,0 +1,5 @@
+#!/bin/bash
+apt-get update
+apt-get install -y rsyslog ntp
+echo "*.* @192.168.56.10:514" >> /etc/rsyslog.conf
+systemctl restart rsyslog
